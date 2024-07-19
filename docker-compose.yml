@@ -1,0 +1,17 @@
+services:
+
+  api_server:
+    container_name: london_eco_today_api
+    image: "teiiri/london_eco_today_api"
+    restart: always
+
+  web:
+    container_name: london_eco_today_web
+    image: "teiiri/london_eco_today_dash"
+    restart: always
+    ports:
+      - "28050:8050"
+    environment:
+      - BACKEND_SERVER_URL=http://api_server:8000
+    depends_on:
+      - api_server

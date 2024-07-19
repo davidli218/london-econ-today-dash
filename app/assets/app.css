@@ -1,0 +1,129 @@
+@font-face {
+    font-family: Acumin;
+    font-weight: bold;
+    src: url("Acumin-BdPro.otf") format("opentype");
+}
+
+
+body {
+    background-color: #f9f9f9;
+    color: #333333;
+    font-size: 15px;
+    margin: 0;
+}
+
+H3 {
+    font-family: Acumin, "Helvetica Neue", sans-serif;
+}
+
+.banner {
+    height: 5.5rem;
+    padding: 0 2rem 0;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.banner Img {
+    position: relative;
+    height: 3rem;
+    width: auto;
+    margin-left: 2%;
+}
+
+#app-container {
+    width: 100%;
+    max-width: none;
+}
+
+#left-column {
+    margin-top: 20px;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: calc(100vh - 5.5rem);
+}
+
+#right-column {
+    background-color: #f4f4f4;
+    padding: 0 2rem;
+    min-height: calc(100vh - 5.5rem);
+}
+
+#intro {
+    margin: 20px 0;
+    font-family: "Helvetica Neue", sans-serif;
+    text-align: justify;
+}
+
+#control-card {
+    width: 100%;
+}
+
+#control-card > p {
+    font-weight: bold;
+}
+
+#control-card > hr {
+    border-width: 2px;
+    height: 4px;
+}
+
+#data_value_card, #data_trends_card {
+    background-color: #FFFFFF;
+    padding: 1rem;
+    margin: 20px auto auto;
+}
+
+#data_value_card > b, #data_trends_card > b {
+    line-height: 2.5;
+}
+
+#data_value_card > Hr, #data_trends_card > Hr {
+    margin: 0;
+    border-width: 3px;
+}
+
+
+@media only screen and (max-width: 750px), screen and (min-width: 768px) and (max-width: 1024px) {
+
+    body {
+        font-size: 13px;
+        margin: 0;
+    }
+
+    h3 {
+        font-size: 2.5rem;
+    }
+
+    .banner {
+        height: 6rem;
+    }
+
+    #intro {
+        margin: 10px 0;
+    }
+
+    #left-column, #right-column {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #right-column {
+        padding: 0 0.5rem;
+    }
+
+    #header {
+        display: none;
+    }
+
+    #data_value_card > b, #data_trends_card > b {
+        line-height: 2.5;
+        font-size: 13px;
+        display: block;
+        text-align: center;
+    }
+
+}
